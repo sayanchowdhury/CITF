@@ -9,9 +9,6 @@ EXTERNAL_TOOLS = \
 	github.com/onsi/ginkgo/ginkgo \
 	github.com/onsi/gomega/...
 
-vet:
-	go list ./... | grep -v "./vendor/*" | xargs go vet
-
 fmt:
 	find . -type f -name "*.go" | grep -v "./vendor/*" | xargs gofmt -s -w -l
 
